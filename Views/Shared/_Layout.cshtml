@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - CMCS</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/Lecturer/SubmitClaim">Submit Claim</a></li>
+                <li><a class="btn btn-success" href="/Lecturer/TrackStatus">Track Claim Status</a></li>
+                <li><a href="/Coordinator/VerifyClaims">Verify Claims</a></li>
+                <li><a href="/Manager/ApproveClaims">Approve Claims</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main" class="container">
+        @RenderBody()
+    </main>
+</body>
+</html>

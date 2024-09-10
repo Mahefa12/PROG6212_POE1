@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9SEeSKzSEbk=",
+  "success": true,
+  "projectFilePath": "/Users/mahefanyavo/Desktop/CMCS/CMCS/CMCS.csproj",
+  "expectedPackageFiles": [
+    "/Users/mahefanyavo/.nuget/packages/microsoft.visualstudio.azure.containers.tools.targets/1.19.5/microsoft.visualstudio.azure.containers.tools.targets.1.19.5.nupkg.sha512"
+  ],
+  "logs": []
+}

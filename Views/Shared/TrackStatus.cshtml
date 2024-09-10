@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Track Claim Status";
+}
+
+<div class="container">
+    <h2>Track Your Claim Status</h2>
+    <p>Below is a list of your submitted claims and their current status:</p>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Claim ID</th>
+                <th>Submission Date</th>
+                <th>Total Amount</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>2024-08-15</td>
+                <td>R20000.00</td>
+                <td><span class="badge badge-warning">Pending Approval</span></td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>2024-08-28</td>
+                <td>R800.00</td>
+                <td><span class="badge badge-success">Approved</span></td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>2024-09-03</td>
+                <td>R600.00</td>
+                <td><span class="badge badge-danger">Rejected</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
