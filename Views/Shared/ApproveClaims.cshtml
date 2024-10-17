@@ -1,31 +1,50 @@
-﻿@{
+﻿@model List<CMCS.Models.ClaimModel>
+
+    @{
     ViewBag.Title = "Approve Claims";
+    }
+
+    <h2>Approve Claims</h2>
+    <p>Academic Managers can approve or reject verified claims here.</p>
+
+    @if (!Model.Any())
+{
+    <div class="alert alert-info">No claims to approve.</div>
 }
-
-<h2>Approve Claims</h2>
-<p>Academic Managers can approve verified claims here.</p>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Claim ID</th>
-            <th>Lecturer Name</th>
-            <th>Hours Worked</th>
-            <th>Hourly Rate</th>
-            <th>Total Amount</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Andre Jules</td>
-            <td>20</td>
-            <td>R1000/h</td>
-            <td>R20000</td>
-            <td>
-                <button class="btn btn-success">Approve</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Claim ID</th>
+                <th>Lecturer Name</th>
+                <th>Hours Worked</th>
+                <th>Hourly Rate</th>
+                <th>Total Amount</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var claim in Model)
+            {
+            <tr>
+                <td>@claim.ClaimId</td>
+                <td>@claim.FullName</td>
+                <td>@claim.HoursWorked</td>
+                <td>@claim.HourlyRate</td>
+                <td>@claim.TotalAmount</td>
+                <td>
+                    <form asp-action="ApproveClaim" method="post" style="display: inline;">
+                        <input type="hidden" name="claimId" value="@claim.ClaimId" />
+                        <button type="submit" class="btn btn-success">Approve</button>
+                    </form>
+                    <form asp-action="RejectClaimByManager" method="post" style="display: inline;">
+                        <input type="hidden" name="id" value="@claim.ClaimId" />
+                        <button type="submit" class="btn btn-danger">Reject</button>
+                    </form>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}

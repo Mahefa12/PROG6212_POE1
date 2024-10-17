@@ -7,9 +7,4 @@ public class LecturerController : Controller
         return View();
     }
 
-    public IActionResult TrackStatus()
-    {
-        return View();
-    }
-
 }

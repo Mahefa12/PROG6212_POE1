@@ -1,11 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Controllers",
+    "\\Models",
     "\\Views",
     "\\Views\\Shared",
     "\\wwwroot",
-    "\\wwwroot\\css"
+    "\\wwwroot\\css",
+    "\\wwwroot\\uploads"
   ],
-  "SelectedNode": "\\Views\\Shared\\_Layout.cshtml",
+  "SelectedNode": "\\wwwroot\\uploads",
   "PreviewInSolutionExplorer": false
 }
